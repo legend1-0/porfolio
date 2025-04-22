@@ -88,6 +88,9 @@ body {
 .light .nav-link:hover {
     text-shadow: 0 0 10px var(--light-accent1), 0 0 20px var(--light-accent1);
 }
+.light .nav-link {
+  color:  rgb(0, 98, 245);
+}
 
 .ripple {
     position: absolute;
