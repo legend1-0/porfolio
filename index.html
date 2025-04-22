@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call'A'Web Portfolio</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#FF3366',secondary:'#3399FF'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="callaweb-high-resolution-logo-removebg-preview.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+   
+</head>
+<body class="light">
+    <div class="custom-cursor cursor-dot"></div>
+    <div class="custom-cursor cursor-outline"></div>
+    <div class="custom-scrollbar"></div>
+    
+    <header class="fixed w-full z-50 glassmorphism">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- <a href="#" class="text-3xl font-['Pacifico'] magnetic-button"></a> -->
+            <img src="callaweb-high-resolution-logo-removebg-preview.png" alt="" style="max-width: 90px;">
+
+            
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link magnetic-button relative overflow-hidden">Home</a>
+                <a href="#about" class="nav-link magnetic-button relative overflow-hidden">About</a>
+                <a href="#portfolio" class="nav-link magnetic-button relative overflow-hidden">Portfolio</a>
+                <a href="#skills" class="nav-link magnetic-button relative overflow-hidden">Skills</a>
+                <a href="#contact" class="nav-link magnetic-button relative overflow-hidden">Contact</a>
+                <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full">
+                    <i class="ri-sun-line ri-lg light-icon"></i>
+                    <i class="ri-moon-line ri-lg dark-icon hidden"></i>
+                </button>
+            </nav>
+            
+            <button class="md:hidden w-10 h-10 flex items-center justify-center" id="mobile-menu-button">
+                <i class="ri-menu-line ri-lg"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-900 origin-top animate-open-menu">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+                <a href="#home" class="nav-link py-2">Home</a>
+                <a href="#about" class="nav-link py-2">About</a>
+                <a href="#portfolio" class="nav-link py-2">Portfolio</a>
+                <a href="#skills" class="nav-link py-2">Skills</a>
+                <a href="#contact" class="nav-link py-2">Contact</a>
+                <button id="mobile-theme-toggle" class="w-10 h-10 flex items-center justify-center self-start">
+                    <i class="ri-sun-line ri-lg light-icon"></i>
+                    <i class="ri-moon-line ri-lg dark-icon hidden"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <section id="home" class="min-h-screen flex items-center relative overflow-hidden">
+        <div class="particles-container"></div>
+        <div class="container mx-auto px-6 py-24 md:py-32 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0 z-10">
+                <h1 class="text-6xl md:text-6xl font-bold mb-6 glitch-effect ">Most <br> Creative Developer </h1>
+                <p class="text-lg md:text-xl mb-8 ">Crafting immersive digital experiences with cutting-edge technologies and stunning visual design.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="gradient-border px-8 py-3 text-lg font-medium !rounded-button magnetic-button">View Projects</button>
+                    <button class="px-8 py-3 text-lg font-medium border-2 !rounded-button magnetic-button">Contact Me</button>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative z-10">
+                <div class="relative gradient-border rounded-2xl overflow-hidden">
+                    <img src="-n137rw.jpg" alt="Creative Designer" class="w-full h-auto object-cover rounded-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="py-24 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center glitch-effect reveal-animation">About Me</h2>
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-2/5 reveal-animation">
+                    <div class="gradient-border rounded-2xl overflow-hidden">
+                        <img src="photo_2024-04-17_01-57-04.jpg" alt="Portrait" class="w-full h-auto object-cover rounded-2xl">
+                    </div>
+                </div>
+                <div class="md:w-3/5 reveal-animation">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6">Jacob Boluuwatife Jeremiah</h3>
+                    <p class="text-lg mb-6">I'm a passionate creative developer with over 2 years of experience crafting
+                         immersive digital experiences. My work sits at the intersection of design and technology, 
+                         where I blend cutting-edge development with stunning visual aesthetics.</p>
+                    <p class="text-lg mb-6">I create Sites that can not be discribed with the word Beauty, 
+                        Beacause it will be an understatement, I desire and wish to collaborate with 
+                         global brands and startups alike to create memorable digital products that push the boundaries of what's possible on the web.</p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <h4 class="font-bold mb-2">Education</h4>
+                            <p> second year statistics student. </p>
+                            <p>Trust me. I will update the site at every academic beakthrough so i wont stay a second year for too long.</p>
+                        </div>
+                        <div>
+                            <!-- <h4 class="font-bold mb-2">Experience</h4>
+                            <p>Senior Creative Developer at Digital Pulse</p>
+                            <p>Thompson</p> -->
+                        </div>
+                    </div>
+                    <!-- <div class="flex gap-4">
+                        <a href="" class="social-icon w-12 h-12 flex items-center justify-center rounded-full border-2">
+                            <i class="ri-linkedin-fill ri-lg"></i>
+                        </a>
+                        <a href="#" class="social-icon w-12 h-12 flex items-center justify-center rounded-full border-2">
+                            <i class="ri-github-fill ri-lg"></i>
+                        </a>
+                         <a href="#" class="social-icon w-12 h-12 flex items-center justify-center rounded-full border-2">
+                            <i class="ri-dribbble-fill ri-lg"></i>
+                        </a>
+                        <a href="#" class="social-icon w-12 h-12 flex items-center justify-center rounded-full border-2">
+                            <i class="ri-behance-fill ri-lg"></i>
+                        </a> -->
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="portfolio" class="py-24 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center glitch-effect reveal-animation">My latest</h2>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-12 reveal-animation">
+                <!-- <button class="filter-tag px-6 py-2 rounded-full border-2 active">All</button>
+                <button class="filter-tag px-6 py-2 rounded-full border-2">Web Design</button>
+                <button class="filter-tag px-6 py-2 rounded-full border-2">UI/UX</button>
+                <button class="filter-tag px-6 py-2 rounded-full border-2">3D</button>
+                <button class="filter-tag px-6 py-2 rounded-full border-2">Motion</button> -->
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card rounded-xl overflow-hidden reveal-animation">
+                    <div class="project-image-container">
+                        <!-- <a href="natureawareness-eos1.vercel.app"> Nature Awareeness website</a> -->
+                        <!-- <img src="natureawareness-eos1.vercel.app" alt="Fashion Website" class="project-image w-full h-64 object-cover object-top"> -->
+                        <!-- <iframe src="natureawareness-eos1.vercel.app" frameborder="0" alt="Fashion Website" class="project-image w-full h-64 object-cover object-top"></iframe> -->
+                    </div>
+                    <div class="p-6">
+                       <a href="https://natureawareness-eos1.vercel.app/" target="_blank"> <h3 class="text-xl font-bold mb-2">Nature Awareness Website</h3> </a>
+                        <p class="mb-4">A simple page but outstanding page that showcases the Beauty of mother Earth.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-sm rounded-full bg-gray-200 dark:bg-gray-800">javascript</span>
+                            <span class="px-3 py-1 text-sm rounded-full bg-gray-200 dark:bg-gray-800">Css</span>
+                            <span class="px-3 py-1 text-sm rounded-full bg-gray-200 dark:bg-gray-800"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card rounded-xl overflow-hidden reveal-animation">
+                    <div class="project-image-container">
+                        <img src="https://readdy.ai/api/search-image?query=mobile%20app%20interface%20design%20for%20fitness%20tracking%20application%2C%20modern%20UI%2FUX%20design%2C%20clean%20interface%2C%20professional%20app%20design%20showcase%2C%20digital%20product%20design%2C%20mobile%20application%20interface%2C%20fitness%20app%20dashboard&width=400&height=300&seq=port2&orientation=landscape" alt="Fitness App" class="project-image w-full h-64 object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">FitTrack Mobile App</h3>
+                        <p class="mb-4">Fitness tracking application with motion-based interaction and real-time analytics.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-sm rounded-full bg-gray-200 dark:bg-gray-800">Swift</span>
+                            <span class="px-3 py-1 text-sm rounded-full bg-gray-200 dark:bg-gray-800">Firebase</span>
+                            <span class="px-3 py-1 text-sm rounded-full bg-gray-200 dark:bg-gray-800">Motion Design</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card rounded-xl overflow-hidden reveal-animation">
+                    <div class="project-image-container">
+                        <img src="https://readdy.ai/api/search-image?query=3D%20virtual%20reality%20experience%20design%2C%20immersive%20digital%20environment%2C%20professional%203D%20modeling%20showcase%2C%20VR%20interface%20design%2C%20interactive%20virtual%20space%2C%20digital%20art%20installation%2C%20professional%203D%20design%20project&width=400&height=300&seq=port3&orientation=landscape" alt="VR Experience" class="project-image w-full h-64 object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Immersive VR Experience</h3>
+                        <p class="mb-4">Virtual gallery showcasing interactive digital art installations with spatial audio.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-sm rounded-full bg-gray-200 dark:bg-gray-800">Unity</span>
+                            <span class="px-3 py-1 text-sm rounded-full bg-gray-200 dark:bg-gray-800">C#</span>
+                            <span class="px-3 py-1 text-sm rounded-full bg-gray-200 dark:bg-gray-800">3D Modeling</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card rounded-xl overflow-hidden reveal-animation">
+                    <div class="project-image-container">
+                        <img src="https://readdy.ai/api/search-image?query=data%20visualization%20dashboard%20design%2C%20interactive%20analytics%20interface%2C%20professional%20dashboard%20UI%2C%20business%20intelligence%20visualization%2C%20modern%20data%20display%2C%20professional%20data%20visualization%20project%2C%20clean%20information%20design&width=400&height=300&seq=port4&orientation=landscape" alt="Data Dashboard" class="project-image w-full h-64 object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Analytics Dashboard</h3>
+                        <p class="mb-4">Real-time data visualization platform with interactive charts and customizable views.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-sm rounded-full bg-gray-200 dark:bg-gray-800">Vue.js</span>
+                            <span class="px-3 py-1 text-sm rounded-full bg-gray-200 dark:bg-gray-800">D3.js</span>
+                            <span class="px-3 py-1 text-sm rounded-full bg-gray-200 dark:bg-gray-800">WebSockets</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card rounded-xl overflow-hidden reveal-animation">
+                    <div class="project-image-container">
+                        <img src="https://readdy.ai/api/search-image?query=motion%20graphics%20design%20for%20music%20video%2C%20dynamic%20visual%20effects%2C%20professional%20animation%20showcase%2C%20creative%20video%20production%2C%20abstract%20digital%20art%20animation%2C%20professional%20motion%20design%20project%2C%20vibrant%20visual%20composition&width=400&height=300&seq=port5&orientation=landscape" alt="Music Video" class="project-image w-full h-64 object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Synesthesia Music Video</h3>
+                        <p class="mb-4">Audio-reactive motion graphics for electronic music artist with generative visuals.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-sm rounded-full bg-gray-200 dark:bg-gray-800">After Effects</span>
+                            <span class="px-3 py-1 text-sm rounded-full bg-gray-200 dark:bg-gray-800">Processing</span>
+                            <span class="px-3 py-1 text-sm rounded-full bg-gray-200 dark:bg-gray-800">TouchDesigner</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card rounded-xl overflow-hidden reveal-animation">
+                    <div class="project-image-container">
+                        <img src="https://readdy.ai/api/search-image?query=interactive%20installation%20art%20design%2C%20digital%20museum%20exhibit%2C%20professional%20interactive%20design%2C%20public%20space%20digital%20art%2C%20sensor-based%20installation%2C%20professional%20interactive%20project%2C%20creative%20technology%20showcase&width=400&height=300&seq=port6&orientation=landscape" alt="Interactive Installation" class="project-image w-full h-64 object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Interactive Installation</h3>
+                        <p class="mb-4">Sensor-based digital art installation responding to audience movement and sound.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-sm rounded-full bg-gray-200 dark:bg-gray-800">Arduino</span>
+                            <span class="px-3 py-1 text-sm rounded-full bg-gray-200 dark:bg-gray-800">Processing</span>
+                            <span class="px-3 py-1 text-sm rounded-full bg-gray-200 dark:bg-gray-800">Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="gradient-border px-8 py-3 text-lg font-medium !rounded-button magnetic-button">View All Projects</button>
+            </div>
+        </div> 
+    </section>
+    
+    <section id="skills" class="py-24 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center glitch-effect reveal-animation">Skills & Expertise</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="reveal-animation">
+                    <h3 class="text-2xl font-bold mb-8">Technical Skills</h3>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Frontend Development</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                            <div class="h-full bg-primary dark:bg-dark-accent1 rounded-full" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">UI/UX Design</span>
+                            <span>30%</span>
+                        </div>
+                        <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                            <div class="h-full bg-primary dark:bg-dark-accent1 rounded-full" style="width: 30%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">3D & WebGL</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                            <div class="h-full bg-primary dark:bg-dark-accent1 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div> -->
+                    
+                    <!-- <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Motion Design</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                            <div class="h-full bg-primary dark:bg-dark-accent1 rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div> -->
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Backend Development</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                            <div class="h-full bg-primary dark:bg-dark-accent1 rounded-full" style="width: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reveal-animation">
+                    <h3 class="text-2xl font-bold mb-8">Experience Distribution</h3>
+                    <div id="skills-chart" class="w-full h-80"></div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                <div class="p-6 rounded-xl border-2 reveal-animation">
+                    <div class="w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="ri-code-s-slash-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Development</h3>
+                    <ul class="space-y-2">
+                        <li>HTML5, CSS3, JavaScript (ES6+)</li>
+                        <li>React, Vue.js, Next.js</li>
+                        <!-- <li>Three.js, WebGL, GLSL</li>
+                        <li>Node.js, Express, MongoDB</li>
+                        <li>Responsive & Adaptive Design</li> -->
+                    </ul>
+                </div>
+                
+                <div class="p-6 rounded-xl border-2 reveal-animation">
+                    <div class="w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="ri-palette-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Design</h3>
+                    <ul class="space-y-2">
+                        <li>UI/UX Design</li>
+                        <li>Figma, Adobe XD, Sketch</li>
+                        <!-- <li>Photoshop, Illustrator</li>
+                        <li>Design Systems</li>
+                        <li>Interaction Design</li> -->
+                    </ul>
+                </div>
+                
+                <div class="p-6 rounded-xl border-2 reveal-animation">
+                    <div class="w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="ri-movie-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Animation</h3>
+                    <ul class="space-y-2">
+                        <!-- <li>GSAP, Framer Motion</li>
+                        <li>After Effects, Lottie</li> -->
+                        <li>CSS Animations</li>
+                        <li>3D Animation</li>
+                        <!-- <li>Motion Graphics</li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="py-24 relative overflow-hidden wave-footer">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center glitch-effect reveal-animation">Get In Touch</h2>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2 reveal-animation">
+                    <!-- <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2 font-medium">Name</label>
+                            <input type="text" id="name" class="custom-input w-full px-4 py-3 rounded-lg" placeholder="Your name">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block mb-2 font-medium">Email</label>
+                            <input type="email" id="email" class="custom-input w-full px-4 py-3 rounded-lg" placeholder="Your email">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block mb-2 font-medium">Subject</label>
+                            <input type="text" id="subject" class="custom-input w-full px-4 py-3 rounded-lg" placeholder="Subject">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block mb-2 font-medium">Message</label>
+                            <textarea id="message" rows="5" class="custom-input w-full px-4 py-3 rounded-lg" placeholder="Your message"></textarea>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <span>I agree to be contacted regarding my inquiry</span>
+                        </div>
+                        
+                        <button type="submit" class="gradient-border w-full px-8 py-3 text-lg font-medium !rounded-button magnetic-button">Send Message</button>
+                    </form> -->
+                </div>
+                
+                <div class="md:w-1/2 reveal-animation" >
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-4">Contact Information</h3>
+                        <p class="mb-6">Feel free to reach out if you're interested in working together or have any questions about my services.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex items-center justify-center mr-4">
+                                    <i class="ri-map-pin-line ri-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Location</h4>
+                                    <p>Alimosho, Lagos, Nigeria.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex items-center justify-center mr-4">
+                                    <i class="ri-mail-line ri-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Email</h4>
+                                    <!-- <p>hello@alexandermitchell.com</p> -->
+                                     <a href="mailto:jacobboluwatife@gmail.com?subject=Meeting&body=Hi, Am in need of your sevice">Jacobboluwatife@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex items-center justify-center mr-4">
+                                    <i class="ri-phone-line ri-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Phone</h4>
+                                    <p>+234 802 205 5052</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Find Me On</h3>
+                        <div class="flex gap-4">
+                            <a href="https://www.linkedin.com/in/jacob-boluwatife-922554331" class="social-icon w-12 h-12 flex items-center justify-center rounded-full border-2" target="_blank">
+                                <i class="ri-linkedin-fill ri-lg"></i>
+                            </a>
+                            <a href="https://x.com/Callacob?s=09" class="social-icon w-12 h-12 flex items-center justify-center rounded-full border-2" target="_blank">
+                                <i class="ri-twitter-fill ri-lg"></i>
+                            </a>
+                            <a href="https://discord.gg/wxlN5hv9k" class="social-icon w-12 h-12 flex items-center justify-center rounded-full border-2" target="_blank">
+                                <i class="ri-discord-fill ri-lg"></i>
+                            </a>
+                            <a href="https://wa.me/+2348022055052" class="social-icon w-12 h-12 flex items-center justify-center rounded-full border-2">
+                                <i class="ri-whatsapp-fill ri-lg"></i>
+                            </a>
+                            <!-- <a href="" class="social-icon w-12 h-12 flex items-center justify-center rounded-full border-2">
+                                <i class="ri-instagram-fill ri-lg"></i> -->
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="mt-8 rounded-xl overflow-hidden h-64">
+                        <img src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" alt="Map" class="w-full h-full object-cover">
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="py-12 relative">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <!-- <a href="#" class="text-3xl font-['Pacifico'] mb-6 md:mb-0"> -->
+                    <img src="callaweb-high-resolution-logo-removebg-preview.png" alt="" style="max-width: 90px;">
+                <!-- </a> -->
+                
+                <div class="flex gap-8">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+            
+            <hr class="border-gray-200 dark:border-gray-800 mb-8">
+            
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2025 Jacob Boluuwatife. All rights reserved.</p>
+                
+                <div class="flex items-center mt-4 md:mt-0">
+                    <span class="mr-4">Accessibility</span>
+                    <label class="switch mr-4">
+                        <input type="checkbox" id="reduced-motion">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Reduced Motion</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Theme toggle
+            const body = document.body;
+            const themeToggle = document.getElementById('theme-toggle');
+            const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+            const lightIcons = document.querySelectorAll('.light-icon');
+            const darkIcons = document.querySelectorAll('.dark-icon');
+            
+            function toggleTheme() {
+                body.classList.toggle('dark');
+                body.classList.toggle('light');
+                
+                lightIcons.forEach(icon => icon.classList.toggle('hidden'));
+                darkIcons.forEach(icon => icon.classList.toggle('hidden'));
+            }
+            
+            themeToggle.addEventListener('click', toggleTheme);
+            mobileThemeToggle.addEventListener('click', toggleTheme);
+            
+            // Mobile menu
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Custom cursor
+            const cursorDot = document.querySelector('.cursor-dot');
+            const cursorOutline = document.querySelector('.cursor-outline');
+            
+            window.addEventListener('mousemove', function(e) {
+                const posX = e.clientX;
+                const posY = e.clientY;
+                
+                cursorDot.style.left = `${posX}px`;
+                cursorDot.style.top = `${posY}px`;
+                
+                cursorOutline.style.left = `${posX}px`;
+                cursorOutline.style.top = `${posY}px`;
+                
+                // Create trail effect
+                const trail = document.createElement('div');
+                trail.className = 'cursor-trail';
+                trail.style.left = `${posX}px`;
+                trail.style.top = `${posY}px`;
+                document.body.appendChild(trail);
+                
+                setTimeout(() => {
+                    trail.remove();
+                }, 500);
+            });
+            
+            // Magnetic buttons
+            const magneticButtons = document.querySelectorAll('.magnetic-button');
+            
+            magneticButtons.forEach(button => {
+                button.addEventListener('mousemove', function(e) {
+                    const position = button.getBoundingClientRect();
+                    const x = e.clientX - position.left - position.width / 2;
+                    const y = e.clientY - position.top - position.height / 2;
+                    
+                    button.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+                });
+                
+                button.addEventListener('mouseout', function() {
+                    button.style.transform = 'translate(0px, 0px)';
+                });
+                
+                button.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    ripple.className = 'ripple';
+                    this.appendChild(ripple);
+                    
+                    const position = button.getBoundingClientRect();
+                    const x = e.clientX - position.left;
+                    const y = e.clientY - position.top;
+                    
+                    ripple.style.left = `${x}px`;
+                    ripple.style.top = `${y}px`;
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+            
+            // Particle background
+            const particlesContainer = document.querySelector('.particles-container');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                const size = Math.random() * 5 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                
+                particle.style.animationDuration = `${Math.random() * 10 + 5}s`;
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+            
+            // Text splitting for character animation
+            const splitTexts = document.querySelectorAll('.split-text');
+            
+            splitTexts.forEach(text => {
+                const content = text.textContent;
+                text.textContent = '';
+                
+                for (let i = 0; i < content.length; i++) {
+                    const char = document.createElement('span');
+                    char.className = 'char';
+                    char.textContent = content[i];
+                    char.style.animationDelay = `${i * 0.05}s`;
+                    text.appendChild(char);
+                }
+            });
+            
+            // Animate the characters on page load
+            const chars = document.querySelectorAll('.char');
+            chars.forEach(char => {
+                char.style.animation = 'fadeInUp 0.5s forwards';
+            });
+            
+            // Scroll animations
+            const revealElements = document.querySelectorAll('.reveal-animation');
+            
+            function checkReveal() {
+                revealElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementTop < windowHeight * 0.85) {
+                        element.classList.add('active');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', checkReveal);
+            checkReveal(); // Check on page load
+            
+            // Custom scrollbar
+            const scrollbar = document.querySelector('.custom-scrollbar');
+            
+            function updateScrollbar() {
+                const scrollPosition = window.scrollY;
+                const totalHeight = document.body.scrollHeight - window.innerHeight;
+                const scrollPercentage = (scrollPosition / totalHeight) * 100;
+                
+                scrollbar.style.height = `${scrollPercentage}%`;
+            }
+            
+            window.addEventListener('scroll', updateScrollbar);
+            updateScrollbar(); // Initialize on page load
+            
+            // Project cards tilt effect
+            VanillaTilt.init(document.querySelectorAll('.project-card'), {
+                max: 10,
+                speed: 300,
+                glare: true,
+                'max-glare': 0.1,
+            });
+            
+            // Filter tags
+            const filterTags = document.querySelectorAll('.filter-tag');
+            
+            filterTags.forEach(tag => {
+                tag.addEventListener('click', function() {
+                    filterTags.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Skills chart
+            const skillsChart = echarts.init(document.getElementById('skills-chart'));
+            
+            const skillsOption = {
+                animation: false,
+                tooltip: {
+                    trigger: 'item',
+                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                    textStyle: {
+                        color: '#1f2937'
+                    }
+                },
+                legend: {
+                    orient: 'vertical',
+                    right: 10,
+                    top: 'center',
+                    textStyle: {
+                        color: body.classList.contains('dark') ? '#ffffff' : '#1f2937'
+                    }
+                },
+                series: [
+                    {
+                        name: 'Experience',
+                        type: 'pie',
+                        radius: ['40%', '70%'],
+                        avoidLabelOverlap: false,
+                        itemStyle: {
+                            borderRadius: 10,
+                            borderColor: body.classList.contains('dark') ? '#1A1A1A' : '#ffffff',
+                            borderWidth: 2
+                        },
+                        label: {
+                            show: false
+                        },
+                        emphasis: {
+                            label: {
+                                show: true,
+                                fontSize: '16',
+                                fontWeight: 'bold'
+                            }
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        data: [
+                            { value: 40, name: 'Frontend Development', itemStyle: { color: 'rgba(87, 181, 231, 1)' } },
+                            { value: 25, name: 'UI/UX Design', itemStyle: { color: 'rgba(141, 211, 199, 1)' } },
+                            { value: 20, name: '3D & WebGL', itemStyle: { color: 'rgba(251, 191, 114, 1)' } },
+                            { value: 15, name: 'Backend Development', itemStyle: { color: 'rgba(252, 141, 98, 1)' } }
+                        ]
+                    }
+                ]
+            };
+            
+            skillsChart.setOption(skillsOption);
+            
+            // Update chart on theme change
+            themeToggle.addEventListener('click', function() {
+                skillsOption.legend.textStyle.color = body.classList.contains('dark') ? '#ffffff' : '#1f2937';
+                skillsOption.series[0].itemStyle.borderColor = body.classList.contains('dark') ? '#1A1A1A' : '#ffffff';
+                skillsChart.setOption(skillsOption);
+            });
+            
+            // Reduced motion toggle
+            const reducedMotionToggle = document.getElementById('reduced-motion');
+            
+            reducedMotionToggle.addEventListener('change', function() {
+                if (this.checked) {
+                    document.documentElement.style.setProperty('--reduced-motion', 'reduce');
+                } else {
+                    document.documentElement.style.removeProperty('--reduced-motion');
+                }
+            });
+            
+            // Resize chart on window resize
+            window.addEventListener('resize', function() {
+                skillsChart.resize();
+            });
+        });
+    </script>
+</body>
+</html>
